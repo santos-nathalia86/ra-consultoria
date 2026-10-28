@@ -140,6 +140,7 @@ export const plans = [
     name: 'Mensal',
     price: '150',
     period: 'por mês',
+    perk: 'Pagamento mês a mês, sem compromisso longo.',
     cta: 'Tenho interesse no plano mensal',
   },
   {
@@ -147,6 +148,14 @@ export const plans = [
     name: 'Trimestral',
     price: '400',
     period: 'por três meses',
+    // Destaque visual do card. Deixe vazio para não exibir.
+    badge: 'Mais econômico',
+    // Motivos exibidos no card para mostrar por que o trimestral vale mais a pena.
+    reasons: [
+      'Tempo para o treino evoluir em etapas, com progressão ao longo das 12 semanas',
+      'Constância de três meses, período em que os resultados começam a aparecer de verdade',
+      'Um único pagamento, sem precisar renovar todo mês',
+    ],
     cta: 'Tenho interesse no plano trimestral',
   },
 ];

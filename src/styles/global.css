@@ -1020,6 +1020,26 @@ a {
   border-radius: var(--radius);
 }
 
+.plan--featured {
+  position: relative;
+  border: 2px solid var(--green);
+}
+
+.plan__badge {
+  position: absolute;
+  top: 0;
+  left: clamp(1.75rem, 3vw, 2.5rem);
+  transform: translateY(-50%);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--off-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .plan__name {
   font-size: 1rem;
   font-weight: 700;
@@ -1061,6 +1081,23 @@ a {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--line);
   color: var(--gray);
+}
+
+.plan__perk {
+  margin: -1rem 0 2.5rem;
+  color: var(--graphite);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.plan__reasons {
+  margin: -1rem 0 2.5rem;
+  font-size: 0.95rem;
+}
+
+.plan__reasons li {
+  text-align: left;
+  hyphens: manual;
 }
 
 .plan .btn {
@@ -1455,6 +1492,15 @@ a {
   .plan__period {
     margin-bottom: 1.5rem;
     padding-bottom: 1.25rem;
+  }
+
+  .plan__perk,
+  .plan__reasons {
+    margin: -0.5rem 0 1.5rem;
+  }
+
+  .plan__badge {
+    left: 1.5rem;
   }
 
   .plan .btn {

@@ -38,11 +38,12 @@ export default function Plans() {
           {plans.map((plan, index) => (
             <article
               key={plan.id}
-              className="plan"
+              className={`plan${plan.badge ? ' plan--featured' : ''}`}
               aria-labelledby={`plano-${plan.id}`}
               data-reveal
               style={{ '--delay': `${index * 100}ms` }}
             >
+              {plan.badge && <p className="plan__badge">{plan.badge}</p>}
               <h3 id={`plano-${plan.id}`} className="plan__name">
                 Plano {plan.name}
               </h3>
@@ -52,6 +53,17 @@ export default function Plans() {
                 <span className="plan__cents">,00</span>
               </p>
               <p className="plan__period">{plan.period}</p>
+              {plan.perk && <p className="plan__perk">{plan.perk}</p>}
+              {plan.reasons && (
+                <ul className="check-list plan__reasons">
+                  {plan.reasons.map((reason) => (
+                    <li key={reason}>
+                      <Check size={18} aria-hidden="true" />
+                      {reason}
+                    </li>
+                  ))}
+                </ul>
+              )}
               <a
                 className="btn btn--primary btn--block"
                 href={createWhatsAppLink(whatsapp.messages[plan.id])}
